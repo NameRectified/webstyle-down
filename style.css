@@ -1,0 +1,366 @@
+/* ---------------- */
+/* Reset */
+/* ---------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture{
+    margin:0;
+}
+
+/* set up the body */
+body{
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* makes images easier to work with */
+img,
+picture{
+    max-width: 100%;
+    display: block;
+}
+
+/* make forms easier to work with  */
+input,
+button,
+textarea,
+select{
+    font:inherit;
+}
+
+/* remove animations for people who have turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* ---------------- */
+/* Utility Classes */
+/* ---------------- */
+
+.flex{
+    display: flex;
+    gap:var(--gap,16px);
+}
+
+.grid{
+    display: grid;
+    gap:var(--gap,16px);
+}
+
+
+.emphasize{
+    font-size: clamp(1.2rem, 4.8vw, 45px);
+    color: red;
+    font-weight: 600;
+}
+
+.emphasize-bigger{
+    font-size: clamp(2.2rem, 10.667vw, 80px);
+    color: red;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: .0625rem;
+    height: .0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+
+/* ---------------- */
+/* Variables*/
+/* ---------------- */
+:root{
+    --color1:#FEFF33;
+    --color2:#3433FF;
+    /* --color3:#FF33FE; */
+    --color3:#FF6F61;
+
+}
+
+/* ---------------- */
+/* Main Style */
+/* ---------------- */
+
+body *{
+    /* border:.0625rem solid red; */
+    font-family:"Barlow Condensed",sans-serif;
+
+}
+
+h1{
+    font-size: clamp(2rem, 10vw, 75px);
+}
+h2{
+    font-size: clamp(1.5rem, 6.67vw, 50px);
+}
+
+p{
+    font-size: clamp(1rem, 5.333vw, 35px);
+}
+
+
+/* Nav bar styles */
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5rem;
+    background-color:var(--color1);
+}
+.acm-logo{
+    width: 200px;
+    min-width: 150px;
+}
+.nav-links{
+    list-style-type: none;
+    justify-content: space-around;
+    gap:1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    font-style: normal;
+    font-size: clamp(0.8rem, 2.56vw, 20px);
+    text-transform: uppercase;
+    padding: 1.067vw 2.133vw;
+    color: var(--color2);
+}
+
+.nav-links li a:hover{
+    background-color: var(--color3);
+}
+
+
+section{
+    padding: 5rem ;
+}
+/* home styles */
+#home{
+    background: var(--color1);
+}
+.home-content{
+    gap: 0;
+}
+.home-content img{
+    width: 50%;
+}
+
+.home-content div{
+    flex-direction: column;
+    justify-content: space-between;
+}
+.home-content div{
+    padding: 0;
+    margin:0;
+}
+
+/* About section */
+#about{
+    background: var(--color1);
+}
+
+#about p{
+    margin-top: 2rem;
+}
+
+
+/* upcoming events */
+#events{
+    background: var(--color1);
+    padding: 2rem 5rem;
+    align-items: center;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+#events ul{
+    padding: 0;
+    justify-content: center;
+    align-items: start;
+
+}
+#events ul li{
+    list-style-type: none;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: .3125rem;
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#events ul li img{
+    width:320px;
+    height: 400px;
+}
+
+/* image highlights section */
+#image-highlights{
+    background-color: var(--color1);
+    padding: 2rem 5rem;
+}
+
+#image-highlights h2{
+    font-size: 6.667vw;
+    font-size: clamp(1.5rem,6.667vw,50px);
+}
+
+
+.gallery-container{
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.gallery-container img{
+    width:30% ;
+    height: 30rem;
+    flex: 1 1 auto;
+}
+
+
+
+
+/* contact section */
+
+#contact{
+    background-color: var(--color1);
+    padding:1rem 5rem;
+    align-items: flex-end;
+    margin:0 ;
+}
+#contact h2 {
+    font-size: clamp(1.5rem,6.667vw,50px);
+    line-height: 1;
+}
+
+#contact p{
+    font-size: clamp(1rem,3.2vw,24px);
+}
+#contact p a{
+    /* font-size: 24px; */
+    font-size: clamp(1rem,3.2vw,24px);
+    text-decoration: none;
+}
+.social{
+    align-items: center;
+}
+.social-links img{
+    width: 2rem;
+}
+
+/* footer section */
+footer{
+    background-color: var(--color1);
+    text-align: center;
+    padding:1rem 5rem;
+}
+
+footer p{
+    color:var(--color2);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+@media (max-width:1040px){
+    section{
+        padding: 2.5rem;
+    }
+
+    .navbar{
+        padding-inline: 2rem;
+    }
+    .home-content{
+        flex-direction: column;
+    }
+    .home-content img{
+        width: 100%;
+    }
+
+    #events{
+        flex-direction: column;
+        align-items: flex-start;
+        width:100%;
+        padding:2rem;
+    }
+    #events ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    #events ul li{
+        width: 100%;
+    }
+
+    #image-highlights{
+        padding: 2rem;
+    }
+    #image-highlights .gallery-container{
+        /* flex-direction: column; */
+        align-items: flex-start;
+    }
+    .gallery-container img{
+        height: 15rem;
+    }
+
+    #contact{
+        padding:2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #contact p a{
+        font-size: 4.133vw;
+    }
+
+}
+
+@media (max-width:645px){
+    .navbar{
+        flex-direction: column;
+        gap:0;
+        padding-inline: 0rem;
+
+    }
+    .links-container{
+        width: 88%;
+    }
+    .nav-links{
+        justify-content: space-between;
+        padding-left: 0;
+        gap:0.5rem;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+
+
+}

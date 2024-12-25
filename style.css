@@ -99,10 +99,11 @@ select{
 /* Variables*/
 /* ---------------- */
 :root{
-    --color1:#FEFF33;
+    /* --color1:#FEFF33; */
+    --color1:#ffffff;
     --color2:#3433FF;
-    /* --color3:#FF33FE; */
     --color3:#FF6F61;
+    --color4:yellow;
 
 }
 
@@ -113,7 +114,7 @@ select{
 body *{
     /* border:.0625rem solid red; */
     font-family:"Barlow Condensed",sans-serif;
-
+    background-color: var(--color1);
 }
 
 h1{
@@ -133,7 +134,6 @@ p{
     justify-content: space-between;
     align-items: center;
     padding-inline: 5rem;
-    background-color:var(--color1);
 }
 .acm-logo{
     width: 200px;
@@ -157,7 +157,7 @@ p{
 }
 
 .nav-links li a:hover{
-    background-color: var(--color3);
+    background-color: var(--color4);
 }
 
 
@@ -165,9 +165,6 @@ section{
     padding: 5rem ;
 }
 /* home styles */
-#home{
-    background: var(--color1);
-}
 .home-content{
     gap: 0;
 }
@@ -175,19 +172,20 @@ section{
     width: 50%;
 }
 
-.home-content div{
+/* .home-content div{
     flex-direction: column;
     justify-content: space-between;
 }
 .home-content div{
     padding: 0;
     margin:0;
-}
+} */
 
-/* About section */
-#about{
-    background: var(--color1);
+.home-content{
+    flex-direction: column;
+    align-items: flex-start
 }
+/* About section */
 
 #about p{
     margin-top: 2rem;
@@ -196,7 +194,6 @@ section{
 
 /* upcoming events */
 #events{
-    background: var(--color1);
     padding: 2rem 5rem;
     align-items: center;
     flex: 1 1 auto;
@@ -228,7 +225,6 @@ section{
 
 /* image highlights section */
 #image-highlights{
-    background-color: var(--color1);
     padding: 2rem 5rem;
 }
 
@@ -255,7 +251,6 @@ section{
 /* contact section */
 
 #contact{
-    background-color: var(--color1);
     padding:1rem 5rem;
     align-items: flex-end;
     margin:0 ;
@@ -282,7 +277,6 @@ section{
 
 /* footer section */
 footer{
-    background-color: var(--color1);
     text-align: center;
     padding:1rem 5rem;
 }
